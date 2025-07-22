@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://github.com/JeeJu-Coding/Futura/blob/main/futura/images/logo.png?raw=true" alt="">
+        </div>
+        <div class="nav">
+            <ul>
+                <li>home</li>
+                <li>stories</li>
+                <li>works</li>
+                <li>pages</li>
+                <li>contact</li>
+                <li>shop</li>
+            </ul>
+        </div>
+        <div class="icons">
+            <div class="brightness">
+                <img src="https://github.com/JeeJu-Coding/Futura/blob/main/futura/images/brightness.png?raw=true" alt="">
+            </div>
+            <div class="search">
+                <img src="https://github.com/JeeJu-Coding/Futura/blob/main/futura/images/search.png?raw=true" alt="">
+            </div>
+        </div>
+    </header>
+    <div class="hero-section">
+        <h5>our vision</h5>
+        <h1>design</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti adipisci ab molestias natus odit non magni soluta qui error fugiat recusandae cum cupiditate, illo, exercitationem quidem? Nulla dicta porro alias.</p>
+        <h6>take a look</h6>
+
+        <div class="arrow">
+            <div class="left-arrow">
+                <img src="https://github.com/JeeJu-Coding/Futura/blob/main/futura/images/left-arrow.png?raw=true" alt="">
+            </div>
+            <div class="right-arrow">
+                <img src="https://github.com/JeeJu-Coding/Futura/blob/main/futura/images/right-arrow.png?raw=true" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="jquery.js"></script>
+
+
+<script>
+   var first_click = true;
+   var second_click=true;
+   var third_click=true;
+$('.right-arrow').on('click' , function(){
+    if (first_click) {
+            $('h1').html('motion');
+            $('.hero-section').css('backgroundImage', 'url(https://github.com/JeeJu-Coding/Futura/blob/main/futura/images/motion.png?raw=true)');
+            first_click = false;
+            second_click=true;
+            
+    }
+    else if(second_click){
+        $('h1').html('engine');
+        $('.hero-section').css('backgroundImage', 'url(https://github.com/JeeJu-Coding/Futura/blob/main/futura/images/engine.png?raw=true)');
+         second_click=false;
+         third_click=true;
+    }
+    else{
+        $('h1').html('design');
+        $('.hero-section').css('backgroundImage', 'url(https://github.com/JeeJu-Coding/Futura/blob/main/futura/images/design.png?raw=true)');
+        third_click=false;
+        first_click = true;
+    }
+});
+</script>
+
+</body>
+</html>
+
+<!-- setTimeout(() =>{
+    $('h1').html('motion');
+    $('.hero-section').css('backgroundImage', 'url(images/motion.png)');
+    first_click = false;
+},1000) -->
